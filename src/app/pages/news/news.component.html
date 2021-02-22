@@ -1,0 +1,24 @@
+<div class="header">
+    <form *ngIf="!ifFeed">
+        <h4>Select feed</h4>
+        <mat-form-field style="width: 400px;" appearance="fill">
+            <mat-select [(ngModel)]="selectedFeed" name="feed">
+                <mat-option (click)="onFeedChange(feed)" *ngFor="let feed of currentUser.feeds;let i = index"
+                    [value]="feed">
+                    {{feed}}<mat-icon style="margin-left: 20px;" (click)="deleteFeed(i)">delete</mat-icon>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <input class="input" *ngIf="ifFeed" [(ngModel)]="newFeed" type="text">
+    <button *ngIf="ifFeed" mat-raised-button color="warn" (click)="openInputAdd()">Cancel</button>
+    <button mat-raised-button color="accent" (click)="addFeed()" (click)="openInputAdd()">Add Feed</button>
+    <button mat-raised-button color="warn" (click)="signOut()">Sign Out</button>
+</div>
+<section *ngIf="rss" class="container">
+    <mat-card *ngFor="let news of rss" (click)="details(news)" class="card">
+        <div class="mat-title">{{ news?.title }}</div>
+        <div *ngIf="news.updated" class="mat-headline">{{ news?.updated | date:'longDate' }}</div>
+        <div *ngIf="news.pubDate" class="mat-headline">{{ news?.pubDate | date:'longDate' }}</div>
+    </mat-card>
+</section>

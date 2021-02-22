@@ -1,0 +1,12 @@
+.card {
+    width: 650px;
+    height: 450px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__user {
+        display: flex;
+        flex-direction: column;
+    }
+}

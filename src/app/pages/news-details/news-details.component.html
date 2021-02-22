@@ -1,0 +1,7 @@
+<mat-card class="card">
+    <div class="mat-title">{{ news?.title }}</div>
+    <div *ngIf="news.comments" class="mat-headline">{{ news?.comments }}</div>
+    <div *ngIf="news.updated" class="mat-headline">{{ news?.updated | date:'longDate' }}</div>
+    <div *ngIf="news.pubDate" class="mat-headline">{{ news?.pubDate | date:'longDate' }}</div>
+    <button mat-flat-button color="accent" (click)="removeLocalItem()">Back</button>
+</mat-card>

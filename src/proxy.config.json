@@ -1,0 +1,20 @@
+{
+    "/rss/dyn/breaking_news.rss": {
+        "target": "https://www.nasa.gov",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/.rss": {
+        "target": "https://www.reddit.com",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/latest-stories/feed": {
+        "target": "https://www.mobileworldlive.com",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}

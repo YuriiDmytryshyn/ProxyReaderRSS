@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "test@gmail.com",
+      "password": "test",
+      "feeds": [
+        "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+        "https://www.reddit.com/.rss",
+        "https://www.mobileworldlive.com/latest-stories/feed"
+      ]
+    }
+  ]
+}
